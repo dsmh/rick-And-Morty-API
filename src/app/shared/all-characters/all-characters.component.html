@@ -1,0 +1,19 @@
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>
+      Listado de personajes
+    </ion-list-header>
+
+    <ion-item *ngFor = "let character of allCharacters.results ">
+      <ion-avatar slot="start">
+        <img [src]="character.image">
+      </ion-avatar>
+      <ion-label>
+        <h2>{{ character.name }}</h2>
+        <h3>Origen: {{ character.origin.name }}</h3>
+        <p>Tipo: {{ character.type}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
